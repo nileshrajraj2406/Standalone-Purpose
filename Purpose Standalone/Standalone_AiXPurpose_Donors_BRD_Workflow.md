@@ -1,11 +1,25 @@
-# Standalone AiXPurpose | Donor Management | Donors | BRD Workflow
+# Standalone AiXPurpose Donors — BRD Workflow
 
-**Status:** Draft for review  
-**Basis:** `Standalone_AiXPurpose_Donors_BRD_Goals.md`, supplied Donors prototype screenshots and user walkthrough; `master_prompt_brd_workflow.md`.  
-**Classification key:** **C** confirmed-described UI/requirement; **A** user assumption; **P** proposal; **D** derived implication; **O** open decision. UI visibility alone does not establish backend persistence or access authorisation.
+| Document detail | Description |
+|---|---|
+| Status | Draft for review |
+| Basis | `Standalone_AiXPurpose_Donors_BRD_Goals.md`; supplied Donors prototype screenshots and user walkthrough; `master_prompt_brd_workflow.md` |
+| Evidence key | **C:** confirmed-described UI/requirement; **A:** user assumption; **P:** proposal; **D:** derived implication; **O:** open decision |
+| Scope note | UI visibility alone does not establish backend persistence or access authorisation. Unspecified notifications, audit logs, payment processing, and full cross-module flows are not invented. |
 
-## Selected Structure
-Includes evidence sources, process overview, inventory, detailed workflows, decisions/alternates, screenshot mapping, goal traceability, candidate features, and open decisions. Unspecified notifications, audit logs, payment processing and full cross-module flows are deliberately not invented.
+## Overview
+This document translates the Donors business goals and rules into user-facing workflows. It covers the evidence sources, process overview, detailed workflow steps, traceability, screenshot mapping, feature handoff, and open decisions. Operational details that have not been established are explicitly marked as open rather than assumed.
+
+## Contents
+- [Overview](#overview)
+- [Purpose, Actors and Boundaries](#1-purpose-actors-and-boundaries)
+- [End-to-End Process Overview](#2-end-to-end-process-overview)
+- [Workflow Inventory](#3-workflow-inventory)
+- [Detailed Workflows](#4-detailed-workflows)
+- [Goals-to-Workflow Traceability](#5-goals-to-workflow-traceability)
+- [Screenshot and UI Evidence Mapping](#6-screenshot-and-ui-evidence-mapping)
+- [Feature Catalogue Handoff](#7-feature-catalogue-handoff)
+- [Decision Log and Validation Summary](#8-decision-log-and-validation-summary)
 
 ## 1. Purpose, Actors and Boundaries
 Translate BG-DON-001…008 and BR-DON-001…010 into Donors page processes. **Actors:** application user/administrator, AiXPurpose in a client tenant, existing Member record, Campaigns data, and external donation source (where used). Exact role grants, connector design and source priority remain open. All tenants share the same product feature set but have isolated data and access (BR-DON-001/002).
@@ -13,21 +27,22 @@ Translate BG-DON-001…008 and BR-DON-001…010 into Donors page processes. **Ac
 ## 2. End-to-End Process Overview
 ```mermaid
 flowchart TD
- T[Enter client tenant] --> L[Open Donors list]
- S[External giving sources] -.Data visible after integration; sync rules open.-> L
- L --> F[Search / tier / advanced filters]
- L --> K[Review KPI cards]
- L --> V[Open donor profile]
- L --> A[Add Donor]
- A --> M[Search and select existing Member]
- M --> C[Enter amount, campaign, payment method, date, optional notes]
- C --> Z[Save Donation]
- V --> R[Record Donation]
- R --> C
- L --> X[Export CSV]
- B[Proposed template import] -.Pending design.-> L
+    T[Enter client tenant] --> L[Open Donors list]
+    S[External giving sources] -. Data visible after integration; sync rules open .-> L
+    L --> F[Search / tier / advanced filters]
+    L --> K[Review KPI cards]
+    L --> V[Open donor profile]
+    L --> A[Add Donor]
+    A --> M[Search and select existing Member]
+    M --> C[Enter amount, campaign, payment method, date, optional notes]
+    C --> Z[Save Donation]
+    V --> R[Record Donation]
+    R --> C
+    L --> X[Export CSV]
+    B[Proposed template import] -. Pending design .-> L
 ```
-The diagram reflects stated navigation and data entry; it does not assert that saving processes payment or automatically changes a member's status.
+
+> The diagram reflects stated navigation and data entry. It does not assert that saving processes payment or automatically changes a member's status.
 
 ## 3. Workflow Inventory
 | Workflow ID | Name | Key supporting Goals / Rules | Evidence |
@@ -125,7 +140,7 @@ The diagram reflects stated navigation and data entry; it does not assert that s
 3. **Add Task** and **Send Message** are visible (C); destination form, outcome, permissions and notifications are not described.
 **Boundary:** Campaign donor outreach is explicitly *future* (FUT-DON-001), not a documented core communications workflow.
 
-## 5. Goals → Workflow Traceability
+## 5. Goals-to-Workflow Traceability
 | Goal / Rule(s) | Workflow(s) | Status / qualification |
 |---|---|---|
 | BG-DON-001; BR-DON-001/002 | WF-DON-01, cross-cutting to all WFs | Tenant isolation confirmed; enforcement detail O |
@@ -139,18 +154,18 @@ The diagram reflects stated navigation and data entry; it does not assert that s
 
 ```mermaid
 flowchart LR
- G1[BG-DON-001] --> W1[WF-DON-01]
- G2[BG-DON-002] --> W1
- G2 --> W6[WF-DON-06]
- G3[BG-DON-003] --> W4[WF-DON-04]
- G4[BG-DON-004] --> W2[WF-DON-02]
- G4 --> W3[WF-DON-03]
- G5[BG-DON-005 Proposed] --> W7[WF-DON-07]
- G6[BG-DON-006 Proposed] --> W8[WF-DON-08]
- G7[BG-DON-007] --> W3
- G7 --> W10[WF-DON-10]
- G8[BG-DON-008] --> W5[WF-DON-05]
- G8 --> W9[WF-DON-09 Assumption]
+    G1[BG-DON-001] --> W1[WF-DON-01]
+    G2[BG-DON-002] --> W1
+    G2 --> W6[WF-DON-06]
+    G3[BG-DON-003] --> W4[WF-DON-04]
+    G4[BG-DON-004] --> W2[WF-DON-02]
+    G4 --> W3[WF-DON-03]
+    G5[BG-DON-005 Proposed] --> W7[WF-DON-07]
+    G6[BG-DON-006 Proposed] --> W8[WF-DON-08]
+    G7[BG-DON-007] --> W3
+    G7 --> W10[WF-DON-10]
+    G8[BG-DON-008] --> W5[WF-DON-05]
+    G8 --> W9[WF-DON-09 Assumption]
 ```
 
 ## 6. Screenshot and UI Evidence Mapping

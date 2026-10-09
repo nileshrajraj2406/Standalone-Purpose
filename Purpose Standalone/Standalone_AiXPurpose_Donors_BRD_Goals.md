@@ -1,11 +1,27 @@
-# Standalone AiXPurpose | Donor Management | Donors | BRD Goals
+# Standalone AiXPurpose Donors — BRD Goals
 
-**Status:** Draft for review  
-**Scope:** Donor Management → Donors, with only necessary Members, Campaign and donation dependencies  
-**Evidence:** User walkthrough and Donors screenshots (`image(20261009-111130).png`, `image(20261009-111809).png`, `image(20261009-112014).png`, `image(20261009-112113).png`, `image(20261009-112213).png`); standalone product decisions; Members BRD Goals/Workflow; `master_prompt_brd_goals.md`.
+| Document detail | Description |
+|---|---|
+| Status | Draft for review |
+| Scope | Donor Management → Donors, with only necessary Members, Campaign, and donation dependencies |
+| Evidence | User walkthrough and Donors screenshots (`image(20261009-111130).png`, `image(20261009-111809).png`, `image(20261009-112014).png`, `image(20261009-112113).png`, `image(20261009-112213).png`); standalone product decisions; Members BRD Goals/Workflow; `master_prompt_brd_goals.md` |
+| Document boundary | Includes business context, outcomes, scope, actors, rules, product dependencies, proposals, decisions, and traceability. Excludes unsupported numeric success targets, legal regimes, detailed architecture, and full process specifications; operational and feature-level detail belongs in the Workflow and Feature Catalogue documents. |
 
-## Selected Structure
-Includes business context, outcomes, scope, actors, rules, product dependencies, proposals, decisions and traceability. Omits unsupported numeric success targets, legal regimes, detailed architecture and full process specifications. Workflow and Feature Catalogue carry operational and feature-level detail.
+## Overview
+This document explains why the Donors page exists, the business outcomes it should support, and the boundaries of the Donors capability in Standalone AiXPurpose. It distinguishes confirmed behaviour from proposed enhancements and decisions that remain open.
+
+## Contents
+- [Overview](#overview)
+- [Purpose and Business Context](#1-purpose-and-business-context)
+- [Business Goals](#2-business-goals)
+- [Product Scope and Positioning](#3-product-scope-and-positioning)
+- [Actors and Business Relationships](#4-actors-and-business-relationships)
+- [Confirmed Business Rules and Constraints](#5-confirmed-business-rules-and-constraints)
+- [Capability Dependencies and Data Boundaries](#6-capability-dependencies-and-data-boundaries)
+- [Proposed Enhancements and Authorised Assumptions](#7-proposed-enhancements-and-authorised-assumptions)
+- [Open Questions and Decisions Required](#8-open-questions-and-decisions-required)
+- [Relationship to Next BRDs](#9-relationship-to-next-brds)
+- [Traceability and Validation Summary](#10-traceability-and-validation-summary)
 
 ## 1. Purpose and Business Context
 The current AiXPurpose was designed for one organisation to consolidate donations and donor information arising from multiple external applications. **Standalone AiXPurpose** must support independent client organisations that rely on integrations, direct entry, or proposed spreadsheet imports, including clients primarily using donor lists and analytics. This document establishes *why* the Donors page exists and its approved boundaries; it does not treat screenshots as proof of unshown backend rules.
@@ -25,13 +41,24 @@ The current AiXPurpose was designed for one organisation to consolidate donation
 No quantitative business success targets were supplied. The on-screen sample figures are not business targets or acceptance thresholds.
 
 ## 3. Product Scope and Positioning
-**Confirmed/current described:** Donors overview cards (Total Donors, Active Pledges, Retention Rate, Prospects); donor list with search, quick tier filters, Advanced Filters, record selection, CSV export and row navigation; Add Donor modal; donor profile with giving summary, score breakdown, tabs and actions; shared global search, notifications, profile/sign-out and AI Copilot entry point. The donor list defaults to **All** tiers / all donors, as stated by the user.
+### Confirmed or Currently Described
+- Donors overview cards: Total Donors, Active Pledges, Retention Rate, and Prospects.
+- Donor list with search, quick tier filters, Advanced Filters, record selection, CSV export, and row navigation. The list defaults to **All** tiers/all donors, as stated by the user.
+- Add Donor modal and donor profile with giving summary, score breakdown, tabs, and actions.
+- Shared global search, notifications, profile/sign-out, and AI Copilot entry point.
 
-**Proposed / assumption-based standalone additions:** donor template-based Excel/CSV bulk import and post-import review; clickable KPI list filtering; additional/client-relevant KPI choices; organisation-definable donor tiers (example boundaries are illustrative, *not* approved); richer filter/export selection as applicable to Donors. These are not confirmed existing behaviour.
+### Proposed or Assumption-Based Additions
+These are not confirmed existing behaviours:
+- Template-based Excel/CSV donor bulk import and post-import review.
+- Clickable KPI list filtering and additional/client-relevant KPI choices.
+- Organisation-definable donor tiers. Example boundaries are illustrative, *not* approved.
+- Richer donor filter/export selection, subject to confirmation.
 
-**Explicit future:** donor communications, including campaign outreach/email; the currently visible **Send Message** action is not evidence that a full campaign communication programme is already implemented or approved for core scope.
+### Explicit Future
+Donor communications, including campaign outreach/email, are future enhancements. The currently visible **Send Message** action does not establish that a full campaign communication programme is implemented or approved for core scope.
 
-**Outside this document's boundary:** full Campaigns, Segments, Prospecting, Communications, Tasks, payment processing or external integration administration specifications. Their interfaces to Donors are mentioned only when needed; these capabilities are not declared product-wide out of scope.
+### Related Capabilities Outside This Document
+Detailed specifications for Campaigns, Segments, Prospecting, Communications, Tasks, payment processing, and external integration administration are outside this document's boundary. Their interfaces to Donors are mentioned only when needed; these capabilities are not declared product-wide out of scope.
 
 ## 4. Actors and Business Relationships
 | Actor / component | Established role | Not specified |
@@ -59,16 +86,19 @@ No quantitative business success targets were supplied. The on-screen sample fig
 ## 6. Capability Dependencies and Data Boundaries
 ```mermaid
 flowchart LR
- A[Client tenant] --> M[Member records]
- A --> D[Donors page]
- M --> E[Add Donor: select Member]
- C[Campaigns data] --> E
- E --> R[Donation record entry]
- S[External giving sources] --> D
- R --> D
- D --> P[Donor profile and reporting]
+    A[Client tenant] --> M[Member records]
+    A --> D[Donors page]
+    M --> E[Add Donor: select Member]
+    C[Campaigns data] --> E
+    E --> R[Donation record entry]
+    S[External giving sources] --> D
+    R --> D
+    D --> P[Donor profile and reporting]
 ```
-This shows user-described relationships, **not** an approved synchronisation or donor-conversion algorithm. Donor profile scores, counts, statuses, tiers and donation-source provenance need source/derivation rules before implementation.
+
+> This diagram shows user-described relationships, **not** an approved synchronisation or donor-conversion algorithm.
+
+Donor profile scores, counts, statuses, tiers, and donation-source provenance need source/derivation rules before implementation.
 
 ## 7. Proposed Enhancements and Authorised Assumptions
 | Ref | Classification | Proposal / business intent |
@@ -80,7 +110,7 @@ This shows user-described relationships, **not** an approved synchronisation or 
 | PE-DON-004 | Proposed enhancement | Consider additional filters and targeted/filtered export for donor review, subject to confirmation of exact scope. |
 | FUT-DON-001 | Explicit future enhancement | Donor communications for campaign outreach and related messages. |
 
-## 8. Open Questions / Decisions Required
+## 8. Open Questions and Decisions Required
 | ID | Decision needed | Why it matters |
 |---|---|---|
 | OD-DON-01 | When is a Member represented as a Donor: on first donation, pledge, profile creation, or another rule? | List membership, counts and cross-page consistency |
@@ -98,4 +128,9 @@ This shows user-described relationships, **not** an approved synchronisation or 
 **BRD Workflow** will elaborate donor navigation, search/filters, donation entry, donor profile, CSV export and proposed capabilities with evidence-labelled alternate/exception paths. **BRD Feature Catalogue** will identify independently testable functions and acceptance outcomes, without inventing unresolved policy. IDs trace as `BG-DON / BR-DON → WF-DON → DON-F`.
 
 ## 10. Traceability and Validation Summary
-Goals BG-DON-001 through BG-DON-008 and rules BR-DON-001 through BR-DON-010 are grounded in the supplied discussions and UI, including clearly marked proposals. No numeric success target, donor score algorithm, permission matrix or tier policy has been manufactured. Principal open decisions OD-DON-01 through OD-DON-10 require review before marking this BRD approved.
+### Traceability
+Goals BG-DON-001 through BG-DON-008 and rules BR-DON-001 through BR-DON-010 are grounded in the supplied discussions and UI, including clearly marked proposals.
+
+### Validation Notes
+- No numeric success target, donor score algorithm, permission matrix, or tier policy has been manufactured.
+- Principal open decisions OD-DON-01 through OD-DON-10 require review before this BRD can be marked approved.

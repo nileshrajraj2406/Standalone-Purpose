@@ -1,12 +1,31 @@
-# Standalone AiXPurpose | Donor Management | Members | BRD Feature Catalogue
+# Standalone AiXPurpose Members — BRD Feature Catalogue
 
-**Status:** Draft for review  
-**Scope:** Donor Management → Members, standalone multi-tenant AiXPurpose  
-**Evidence:** User walkthrough and Members screenshots; `Standalone_AiXPurpose_Members_BRD_Goals.md`; `Standalone_AiXPurpose_Members_BRD_Workflow.md`; `master_prompt_brd_feature_catalogue(1).md`.
+| Document detail | Description |
+|---|---|
+| Status | Draft for review |
+| Scope | Donor Management → Members, within standalone multi-tenant AiXPurpose |
+| Feature ID convention | `MEM-F-001` onward; IDs are stable within this document |
+| Evidence sources | User walkthrough and Members screenshots; `Standalone_AiXPurpose_Members_BRD_Goals.md`; `Standalone_AiXPurpose_Members_BRD_Workflow.md`; `master_prompt_brd_feature_catalogue(1).md` |
+| Document boundary | Includes source and scope, feature inventory and specifications, field matrix, forward/reverse traceability, screenshot mapping, decision log, handoff, and validation. Speculative permission matrices, status-state machines, KPI formulas, source connectors, and technical/API designs are excluded where requirements do not establish them. |
 
-## Selected Structure
+## Overview
+This catalogue decomposes the Members business goals, rules, and workflows into individually reviewable product features and acceptance outcomes. It distinguishes confirmed behaviour from proposed assumptions and captures the decisions that remain open.
 
-Includes source/scope, atomic feature inventory and specifications, field matrix, forward/reverse traceability, screenshot mapping, decision log, handoff and validation. Omits speculative permission matrices, status-state machines, KPI formulas, source connectors and technical/API design because the supplied requirements do not establish those details.
+The catalogue covers Members capabilities and the navigation handoff to donation entry. Donation processing, full Donors workflows, Campaigns administration, Segments, Prospecting, and AI Copilot interaction logic are outside its scope. Communications remain a future enhancement (`BR-MEM-008`).
+
+## Contents
+- [Overview](#overview)
+- [Purpose, Classification and Boundaries](#1-purpose-classification-and-boundaries)
+- [Source-Backed Feature Inventory](#2-source-backed-feature-inventory)
+- [Detailed Feature Specifications](#3-detailed-feature-specifications)
+- [Manual Entry and Editing Field Matrix](#4-manual-entry-and-editing-field-matrix)
+- [Goals-to-Workflows-to-Features Traceability](#5-goals-to-workflows-to-features-forward-traceability)
+- [Workflow-to-Feature Mapping](#6-workflow-to-features-mapping)
+- [Reverse Feature Traceability](#7-reverse-feature-traceability)
+- [Screenshot and UI Evidence Index](#8-screenshot-and-ui-evidence-index)
+- [Open Decisions and Coverage Gaps](#9-open-decisions-and-coverage-gaps)
+- [Technical, Story and QA Handoff](#10-technical-story-and-qa-handoff)
+- [Validation Summary](#11-validation-summary)
 
 ## 1. Purpose, Classification and Boundaries
 
@@ -16,7 +35,7 @@ Clients use isolated tenant/workspaces and receive the **same product feature se
 
 **ID convention:** `MEM-F-001` onward, assigned only in this document. Existing goal (`BG-MEM-*`), rule (`BR-MEM-*`), workflow (`WF-MEM-*`), enhancement (`PE-MEM-*`) and decision (`OQ-MEM-*`) IDs are preserved.
 
-## 2. Source-backed Feature Inventory
+## 2. Source-Backed Feature Inventory
 
 | Feature ID | Feature | Status | Goal ID(s) | Workflow ID(s) | Rule / proposal |
 |---|---|---|---|---|---|
@@ -299,7 +318,7 @@ The user supplied these fields as present in the Add Member form; **mandatory in
 
 **Terminology conflict:** *Donation* versus *Donated* (and *Pledge* versus *Pledged*) is not silently standardised. **Active** is a described default listing criterion, but its relation to these status values has not been confirmed (`OQ-MEM-001/002`).
 
-## 5. Goals → Workflows → Features (Forward Traceability)
+## 5. Goals-to-Workflows-to-Features (Forward Traceability)
 
 | Business goal / rule | Relevant workflow(s) | Supporting feature(s) | Coverage / decision |
 |---|---|---|---|
@@ -320,7 +339,7 @@ The user supplied these fields as present in the Add Member form; **mandatory in
 | BR-MEM-007 | WF-MEM-10 | MEM-F-021, MEM-F-022 | Confirmed rule / cross-cutting constraint |
 | BR-MEM-008 | Cross-cutting / no current workflow | No current execution feature; donor communications are future-only | Future boundary |
 
-## 6. Workflow → Features Mapping
+## 6. Workflow-to-Feature Mapping
 
 | Workflow | Relevant features | Notes |
 |---|---|---|
@@ -378,7 +397,7 @@ The **Feature Inventory** (section 2) provides each feature’s source-backed go
 | MEM-F-035 | PE-MEM-006 | Inventory §2; acceptance in §3/MEM-F-035 |
 | MEM-F-036 | PE-MEM-007 | Inventory §2; acceptance in §3/MEM-F-036 |
 
-## 8. Screenshot / UI Evidence Index
+## 8. Screenshot and UI Evidence Index
 
 | UI ID | Supplied image | Evidence used | Limitations |
 |---|---|---|---|
@@ -412,8 +431,16 @@ Engineering handoff should address tenant-scoped persistence/access behaviour, m
 
 ## 11. Validation Summary
 
-- **Feature count:** 36 features, of which 24 are classified Confirmed (existing behaviour or confirmed product decision) and 12 are Approved assumption proposals. Future donor communications are deliberately excluded from current execution features.
-- **Capability groups:** Workspace and listing; Manual member management; Member profile and donation link; Integration and extraction; Proposed import and refresh; Proposed KPIs and analysis.
-- **Coverage:** Eight business goals, eight business rules and ten workflows are indexed; `BR-MEM-008` is intentionally a future-only boundary. Proposed goals and workflows retain their non-baseline classification.
-- **Outstanding decisions:** `OQ-MEM-001`–`011` from BRD Goals remain open. No unsupported data-policy, security or recovery behaviour was silently added.
-- **Next step:** Confirm decisions affecting validation, import, KPI definitions and permissions before deriving final implementation stories and QA/UAT scenarios.
+| Measure | Result |
+|---|---|
+| Feature count | 36 |
+| Confirmed features | 24 (existing behaviour or confirmed product decision) |
+| Approved-assumption proposals | 12 |
+| Capability groups | Workspace and listing; Manual member management; Member profile and donation link; Integration and extraction; Proposed import and refresh; Proposed KPIs and analysis |
+| Traceability coverage | Eight business goals, eight business rules, and ten workflows are indexed; `BR-MEM-008` remains a future-only boundary |
+| Outstanding decisions | `OQ-MEM-001`–`OQ-MEM-011` remain open |
+
+### Validation Notes
+- Proposed goals and workflows retain their non-baseline classification.
+- No unsupported data-policy, security, or recovery behaviour has been added.
+- Confirm decisions affecting validation, import, KPI definitions, and permissions before deriving final implementation stories and QA/UAT scenarios.

@@ -1,12 +1,30 @@
-# Standalone AiXPurpose | Donor Management | Members | BRD Goals
+# Standalone AiXPurpose Members — BRD Goals
 
-**Status:** Draft for review  
-**Scope:** Standalone AiXPurpose, Donor Management → Members  
-**Basis:** User-supplied AiXPurpose prototype screenshots, page walkthroughs, standalone product clarifications, and `master_prompt_brd_goals.md`.
+| Document detail | Description |
+|---|---|
+| Status | Draft for review |
+| Scope | Standalone AiXPurpose, Donor Management → Members |
+| Basis | User-supplied AiXPurpose prototype screenshots, page walkthroughs, standalone product clarifications, and `master_prompt_brd_goals.md` |
+| Document boundary | Covers purpose, context, goals, product positioning, scope, actors, confirmed business rules, information boundaries, dependencies, proposed enhancements, open decisions, and traceability. Detailed form logic, click-by-click flows, validations, exception handling, and acceptance criteria belong in the BRD Workflow and BRD Feature Catalogue. Numerical business success targets and technical architecture details have not been supplied and are not fabricated. |
 
-## Selected Structure
+## Overview
+This document defines the business goals and boundaries for making the Members page reusable across independent AiXPurpose client organisations. It distinguishes existing described behaviour from proposed enhancements and decisions that need clarification.
 
-This document covers purpose, context, goals, product positioning, scope, actors, confirmed business rules, information boundaries, dependencies, proposed enhancements, open decisions, and traceability. It deliberately leaves detailed form logic, click-by-click flows, validations, exception handling, and acceptance criteria to **BRD Workflow** and **BRD Feature Catalogue**. Numerical business success targets and technical architecture details have not been supplied and are not fabricated.
+## Contents
+- [Overview](#overview)
+- [Purpose](#1-purpose)
+- [Business Context and Problem](#2-business-context-and-problem)
+- [Business Goals and Desired Outcomes](#3-business-goals-and-desired-outcomes)
+- [Business Capability and Product Positioning](#4-business-capability-and-product-positioning)
+- [Stakeholders and Actors](#5-stakeholders-and-actors)
+- [In-Scope Members Page Capabilities](#6-in-scope-members-page)
+- [Out-of-Scope Items and Boundaries](#7-out-of-scope-and-boundaries)
+- [Confirmed Business Rules and Constraints](#8-confirmed-business-rules-and-constraints)
+- [Member Information Boundaries and Dependencies](#9-member-information-boundaries-and-dependencies)
+- [Open Questions and Decisions Required](#10-open-questions-and-decisions-required)
+- [Traceability and Downstream Handoff](#11-traceability-and-downstream-handoff)
+- [Relationship to Next Documents](#12-relationship-to-next-documents)
+- [Validation Summary](#13-validation-summary)
 
 ## 1. Purpose
 
@@ -54,9 +72,9 @@ The Member and Donor concepts must remain distinct: the Members page maintains m
 | Application user | Searches, filters, views members, and uses displayed page functions as permitted. | Role definitions and authorisations are not specified. |
 | External source application | Supplies member data through existing integrations. | Connector list, sync cadence, and system-of-record policies are not specified. |
 
-## 6. In Scope: Members Page
+## 6. In-Scope Members Page
 
-### 6.1 Existing prototype capabilities described or shown
+### 6.1 Existing Prototype Capabilities
 
 - Member records originating from integrations and manual member creation appear in the Members list.
 - Members listing with search by **name, email, or phone**, donor-type and member-status filters, and pagination.
@@ -71,7 +89,9 @@ The Member and Donor concepts must remain distinct: the Members page maintains m
 - Member profile shows classification/status, contact information, **Total Donations**, **Pledged Amount 2024**, and **iWave Score**; the details available depend on the record.
 - Shared application header: global search, notifications, logged-in user/profile/sign-out, and **AI Copilot** entry point. AI Copilot behaviour has not been defined for this page.
 
-### 6.2 Proposed standalone product enhancements (not yet approved as existing)
+### 6.2 Proposed Standalone Product Enhancements
+
+These proposals are not confirmed existing functionality.
 
 | Ref | Proposal | Business purpose |
 |---|---|---|
@@ -85,7 +105,7 @@ The Member and Donor concepts must remain distinct: the Members page maintains m
 
 **Future enhancement boundary:** Donor communications such as campaign email outreach are intended as a future product enhancement; they are not part of the current Members-page core release definition.
 
-## 7. Out of Scope and Boundaries
+## 7. Out-of-Scope Items and Boundaries
 
 - Detailed specification of **Donors**, **Segments**, **Prospecting**, or other modules/pages as independent modules. The related **Add Donation** path is in scope only as a Members-page dependency.
 - Detailed design of Campaigns, Donations, integrations, messaging, or AI Copilot beyond what is needed to identify Members-page dependencies.
@@ -155,8 +175,10 @@ Traceability references above are **document-local**. Workflow and Feature Catal
 
 ## 13. Validation Summary
 
-- **Confirmed:** Existing Members page behaviours described above; standalone isolated workspaces; common feature set for every tenant; future-only donor communications.
-- **Proposed, not yet approved as existing:** Member file import, refresh, configurable/clickable KPIs, additional filters, and filtered export.
-- **Material open decisions:** Member/donor definitions and status semantics; role permissions; bulk import policies; KPI calculations; record matching; year-specific pledge display; donation association.
-- **Source contradictions/ambiguities:** The user uses **Donation/Donated** and **Pledge/Pledged** inconsistently as status labels; the active-only default is not reconciled with the four stated member statuses. These are intentionally left open.
-- **Traceability:** Goal and rule IDs are provided; later workflow/feature IDs await creation. No unsupported completion claim is made.
+| Category | Summary |
+|---|---|
+| Confirmed | Existing Members page behaviours described above; isolated workspaces; common feature set for every tenant; future-only donor communications |
+| Proposed | Member file import, refresh, configurable/clickable KPIs, additional filters, and filtered export are not yet approved as existing functionality |
+| Material open decisions | Member/donor definitions and status semantics; role permissions; bulk import policies; KPI calculations; record matching; year-specific pledge display; donation association |
+| Source ambiguities | **Donation/Donated** and **Pledge/Pledged** are used inconsistently as status labels. The active-only default is not reconciled with the four stated member statuses. These remain open. |
+| Traceability | Goal and rule IDs are provided; workflow and feature IDs are maintained in their respective documents. No unsupported completion claim is made. |

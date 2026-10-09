@@ -1,13 +1,27 @@
-# Standalone AiXPurpose | Donor Management | Members | BRD Workflow
+# Standalone AiXPurpose Members — BRD Workflow
 
-**Status:** Draft for business and technical review  
-**Scope:** Donor Management → Members (including essential donation-entry handoff)  
-**Business-intent anchor:** `Standalone_AiXPurpose_Members_BRD_Goals.md`  
-**Source evidence:** User's Members walkthrough and screenshots (`image(20261009-094934).png`, `image(20261009-101351).png`, `image(20261009-110406).png`); approved standalone-product decisions; `master_prompt_brd_workflow.md`.
+| Document detail | Description |
+|---|---|
+| Status | Draft for business and technical review |
+| Scope | Donor Management → Members, including the essential donation-entry handoff |
+| Business-intent source | `Standalone_AiXPurpose_Members_BRD_Goals.md` |
+| Source evidence | User Members walkthrough and screenshots (`image(20261009-094934).png`, `image(20261009-101351).png`, `image(20261009-110406).png`); approved standalone-product decisions; `master_prompt_brd_workflow.md` |
+| Document boundary | Includes scope, evidence conventions, actor boundaries, workflow inventory, process and goal-link diagrams, detailed flows, shared rules, screenshot mapping, traceability, Feature Catalogue handoff, open decisions, and validation. Detailed technical architecture, invented permission matrices, unapproved validations, full donation processing, and unrelated module workflows are omitted. |
 
-## Selected Structure
+## Overview
+This document explains how the Members capability supports the outcomes defined in the BRD Goals. It describes the user-facing workflows and distinguishes confirmed behaviour from assumptions, proposals, and open decisions. Atomic feature acceptance criteria belong in the BRD Feature Catalogue.
 
-Includes scope, evidence conventions, actor boundaries, workflow inventory, cross-process and goal-link diagrams, detailed flows, shared rules, screenshot mapping, traceability, Feature Catalogue handoff, open decisions, and validation. Detailed technical architecture, invented permission matrices, unapproved validations, full donation processing, and unrelated module workflows are deliberately omitted.
+## Contents
+- [Overview](#overview)
+- [Purpose, Boundaries and Evidence](#1-purpose-boundaries-and-evidence)
+- [Actors and Shared Rules](#2-actors-and-shared-rules)
+- [Workflow Inventory](#3-workflow-inventory)
+- [Detailed Member Workflows](#4-detailed-member-workflows)
+- [UI Evidence Mapping](#5-ui-evidence-mapping)
+- [Goals-to-Workflow Traceability](#6-goals-to-workflow-traceability)
+- [Feature Catalogue Handoff](#7-feature-catalogue-handoff)
+- [Open Decisions and Contradictions](#8-open-decisions-and-contradictions)
+- [Validation Summary](#9-validation-summary)
 
 ## 1. Purpose, Boundaries, and Evidence
 
@@ -48,7 +62,7 @@ This document explains **how** the Members capability supports the outcomes in B
 | WF-MEM-09 | Additional filters and targeted export | Proposed enhanced filters/export | BG-MEM-007; PE-MEM-006/007 | **A**; options O |
 | WF-MEM-10 | Start donation from member | Select `$` or profile Add Donation | BG-MEM-008; BR-MEM-007 | C; downstream outcome O |
 
-### 3.1 Connected process overview
+### 3.1 Connected Process Overview
 
 ```mermaid
 flowchart TD
@@ -66,7 +80,7 @@ flowchart TD
     D --> P[Donation entry outside Members specification]
 ```
 
-### 3.2 Goals to workflows
+### 3.2 Goals-to-Workflows Mapping
 
 ```mermaid
 flowchart LR
@@ -261,8 +275,10 @@ No final Feature Catalogue IDs or unsupported acceptance criteria are assigned h
 
 ## 9. Validation Summary
 
-- **Defined:** 10 Members workflows: 6 grounded in existing page/source interactions (with shared access and integration boundaries), 3 proposed enhancements, and 1 confirmed donation handoff. Workflow classification is per each workflow's evidence label rather than a claim about deployment status.
-- **Traceability:** Each workflow maps to `BG-MEM-*`, a confirmed rule, or a labelled proposal; the tenant boundary and future communication boundary remain consistent with Goals. The goal-to-workflow diagram distinguishes proposals.
-- **Evidence:** Three supplied application screenshots are mapped by source filename, with explicit limitations; user descriptions supply other details not verifiable from screenshot alone.
-- **Material decisions:** Member/status definitions, access authorisation, import policy, integration merging, KPI rules, export scope and donation linkage require confirmation. No fabricated outcomes, state machines, security controls or error-recovery policies are introduced.
-- **Next document:** **Members BRD Feature Catalogue**, derived from validated workflows and approved decisions rather than from invented specifications.
+| Area | Summary |
+|---|---|
+| Workflow inventory | 10 Members workflows: six grounded in existing page/source interactions (including shared access and integration boundaries), three proposed enhancements, and one confirmed donation handoff. Classification follows each workflow's evidence label and does not claim deployment status. |
+| Traceability | Each workflow maps to `BG-MEM-*`, a confirmed rule, or a labelled proposal. The tenant and future communication boundaries remain consistent with Goals, and the goal-to-workflow diagram distinguishes proposals. |
+| Evidence | Three supplied application screenshots are mapped by source filename with explicit limitations; user descriptions support details that screenshots cannot verify. |
+| Material decisions | Member/status definitions, access authorisation, import policy, integration merging, KPI rules, export scope, and donation linkage require confirmation. No fabricated outcomes, state machines, security controls, or error-recovery policies are introduced. |
+| Next document | **Members BRD Feature Catalogue**, derived from validated workflows and approved decisions rather than invented specifications. |

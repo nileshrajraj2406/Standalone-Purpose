@@ -1,25 +1,27 @@
 # Standalone AiXPurpose Donors — BRD Feature Catalogue
 
-> Status: Draft for review
-> Primary sources: User Donors requirements and screenshots, `Standalone_AiXPurpose_Donors_BRD_Goals.md`, `Standalone_AiXPurpose_Donors_BRD_Workflow.md`, `master_prompt_brd_feature_catalogue(1).md`
-> ID convention: `DON-F-001` onward; document-local stable feature IDs.
-> Evidence legend: Confirmed = directly supported behaviour; Approved assumption = user-authorised unbuilt proposal; Proposed = future candidate requiring confirmation.
-> Scope note: No existing role matrix, formulas, processing APIs or test case IDs are presumed.
+| Document detail | Description |
+|---|---|
+| Status | Draft for review |
+| Feature ID convention | `DON-F-001` onward; IDs are stable within this document |
+| Evidence statuses | **Confirmed:** directly supported behaviour; **Approved assumption:** user-authorised, unbuilt proposal; **Proposed:** future candidate requiring confirmation |
+| Primary sources | User Donors requirements and screenshots; `Standalone_AiXPurpose_Donors_BRD_Goals.md`; `Standalone_AiXPurpose_Donors_BRD_Workflow.md`; `master_prompt_brd_feature_catalogue(1).md` |
+| Scope note | No existing role matrix, formulas, processing APIs or test case IDs are presumed |
 
 ## Overview
 This document captures the Donors feature catalogue for the Standalone AiXPurpose product in a README-style format. It breaks down goals and workflows into individually reviewable, testable product features and tracks open decisions, feature traceability, and implementation handoff information.
 
 The catalogue is intentionally scoped to observable product behaviour derived from source materials and screenshots. It avoids guessing unsupported permissions, formulas, backend interfaces, or generic acceptance criteria.
 
-## Table of Contents
+## Contents
 - [Overview](#overview)
 - [Scope and Document Relationship](#1-scope-and-document-relationship)
 - [Evidence and Screenshots](#2-evidence-and-screenshots)
 - [Feature Inventory](#3-feature-inventory)
 - [Detailed Feature Catalogue](#4-detailed-feature-catalogue)
 - [Applicable Functional Matrices](#5-applicable-functional-matrices)
-- [Goal → Workflow → Feature Coverage](#6-goal--workflow--feature-coverage)
-- [Workflow → Feature Coverage](#7-workflow--feature-coverage)
+- [Goal-to-Workflow-to-Feature Coverage](#6-goal-to-workflow-to-feature-coverage)
+- [Workflow-to-Feature Coverage](#7-workflow-to-feature-coverage)
 - [Reverse Feature Traceability](#8-reverse-feature-traceability)
 - [Pending Decisions and Coverage Gaps](#9-pending-decisions-and-coverage-gaps)
 - [Product, Engineering and QA Handoff](#10-product-engineering-and-qa-handoff)
@@ -39,7 +41,7 @@ Campaigns, Members, Tasks, Communications, and external connectors are included 
 | UI-DON-04 | `image(20261009-112113).png` | Donor profile, identity and score |
 | UI-DON-05 | `image(20261009-112213).png` | Profile actions and scoring breakdown |
 
-Screenshots confirm visible UI, not persistence, identity matching, formula correctness, permissions, notification delivery or payment processing. Screenshot files must accompany this Markdown file to render the relative image references; paths are not embedded into feature descriptions unnecessarily.
+Screenshots confirm visible UI, not persistence, identity matching, formula correctness, permissions, notification delivery or payment processing. The source screenshot files are listed for reference but are not embedded in this catalogue.
 
 ## 3. Feature Inventory
 | ID | Feature | Group | Goal(s) | Workflow(s) | Evidence |
@@ -48,7 +50,7 @@ Screenshots confirm visible UI, not persistence, identity matching, formula corr
 | DON-F-002 | Donors Page Navigation | Tenant and Navigation | BG-DON-002 | WF-DON-01 | Confirmed |
 | DON-F-003 | Shared Header Entry Points | Tenant and Navigation | BG-DON-004 | WF-DON-01 | Confirmed |
 | DON-F-004 | Donor Table Presentation | Donor Listing | BG-DON-004 | WF-DON-01; WF-DON-02 | Confirmed |
-| DON-F-005 | Search Donors by Name Email or Tier | Donor Listing | BG-DON-004 | WF-DON-02 | Confirmed |
+| DON-F-005 | Search Donors by Name, Email, or Tier | Donor Listing | BG-DON-004 | WF-DON-02 | Confirmed |
 | DON-F-006 | Quick Tier Filtering | Donor Listing | BG-DON-004 | WF-DON-02 | Confirmed |
 | DON-F-007 | Advanced Filter Drawer | Donor Listing | BG-DON-004 | WF-DON-02 | Confirmed |
 | DON-F-008 | Engagement Segment Choices | Donor Listing | BG-DON-004 | WF-DON-02 | Confirmed |
@@ -108,7 +110,7 @@ Screenshots confirm visible UI, not persistence, identity matching, formula corr
 - **Requirement:** Show donor selection checkbox, Donor identity/email, Type, Tier, Total Given, Last Gift, Status and per-row three-dot action.
 - **Acceptance outcome:** Given donor data, the table presents the specified columns and actions.
 
-#### DON-F-005 — Search Donors by Name Email or Tier
+#### DON-F-005 — Search Donors by Name, Email, or Tier
 - **Evidence:** Confirmed. **Traceability:** BG-DON-004; No separately numbered business rule; WF-DON-02. **Source:** Donors page user walkthrough and matching workflow/UI references.
 - **Requirement:** Provide list search labelled Filter by name, email, or tier and display matching donor records.
 - **Acceptance outcome:** When a search value matches donor name, email or tier, the corresponding donor row can be located.
@@ -293,7 +295,7 @@ Screenshots confirm visible UI, not persistence, identity matching, formula corr
 - **Acceptance outcome:** Assumption: after import an administrator sees a result count, such as 250 imported, and can inspect data for correction.
 - **Open decision(s):** OD-DON-01; OD-DON-06.
 
-### Proposed Analytics
+### Additional Proposed Filtering and Export
 
 #### DON-F-035 — Additional Donor Filtering and Targeted Export
 - **Evidence:** Proposed. **Traceability:** BG-DON-004; BG-DON-008; PE-DON-004; WF-DON-02; WF-DON-05. **Source:** Donors page user walkthrough and matching workflow/UI references.
@@ -324,7 +326,7 @@ Screenshots confirm visible UI, not persistence, identity matching, formula corr
 | Profile tabs | Overview, History, Engagement, Notes | Content and edit rights |
 | Profile actions | Record Donation, Add Task, Send Message | Task and message workflow; future outreach distinction |
 
-## 6. Goal → Workflow → Feature Coverage
+## 6. Goal-to-Workflow-to-Feature Coverage
 | Goal | Workflow(s) | Feature IDs | Qualification |
 |---|---|---|---|
 | BG-DON-001 | WF-DON-01 | DON-F-001 | Source-backed, open decisions noted |
@@ -350,7 +352,7 @@ Screenshots confirm visible UI, not persistence, identity matching, formula corr
 | BR-DON-009 | DON-F-007, DON-F-008, DON-F-009 |
 | BR-DON-010 | DON-F-013, DON-F-015, DON-F-016 |
 
-## 7. Workflow → Feature Coverage
+## 7. Workflow-to-Feature Coverage
 | Workflow ID | Supporting feature IDs |
 |---|---|
 | WF-DON-01 | DON-F-001, DON-F-002, DON-F-003, DON-F-004 |
@@ -429,10 +431,16 @@ The following Goals BRD decision IDs remain unresolved; this catalogue does not 
 - **QA/UAT:** derive tests from the acceptance outcomes in Section 4; extend positive/negative/boundary cases only after unresolved validations, permission checks and formulas are approved.
 
 ## 11. Validation Summary
-- **Total features:** 35
-- **Confirmed:** 28
-- **Proposed:** 4
-- **Approved assumption:** 3
-- **Groups:** Tenant and Navigation (3), Donor Listing (8), Donor Profile (6), Donation Entry (9), Exports and Integrations (2), Proposed Analytics (4), Proposed Import (3)
-- **Goal and workflow coverage:** All eight BG-DON goals and all ten WF-DON workflows appear in the coverage tables; applicable rules BR-DON-001…010 are separately indexed. Traceability is at workflow level because precise numbered steps were not universally established for all source records.
-- **Known limits:** UI evidence does not prove backend processing, donor counts or score formulas; proposed and assumption-based entries require approval. Material decisions OD-DON-01…10 remain open.
+
+| Measure | Result |
+|---|---|
+| Total features | 35 |
+| Confirmed | 28 |
+| Proposed | 4 |
+| Approved assumptions | 3 |
+| Feature groups | Tenant and Navigation (3); Donor Listing (8); Donor Profile (6); Donation Entry (9); Exports and Integrations (2); Proposed Analytics (4); Proposed Import (3) |
+
+### Coverage and Limitations
+- **Goal and workflow coverage:** All eight BG-DON goals and all ten WF-DON workflows appear in the coverage tables. Applicable rules BR-DON-001–010 are separately indexed.
+- **Traceability:** Mapped at workflow level because precise numbered steps were not established for every source record.
+- **Known limits:** UI evidence does not prove backend processing, donor counts or score formulas. Proposed and assumption-based entries require approval. Material decisions OD-DON-01–10 remain open.

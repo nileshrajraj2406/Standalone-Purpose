@@ -51,11 +51,11 @@ As-Is indicates existing functionality. To-Be identifies enhancements required f
 
 ### 2.1 Existing Application – As-Is
 
-![Existing Application – As-Is](Members/workflow_screenshot/2.1%20Existing%20Application%20%E2%80%93%20As-Is.png)
+![Existing Application – As-Is](workflow_screenshot/2.1%20Existing%20Application%20%E2%80%93%20As-Is.png)
 
 ### 2.2 Standalone Application – To-Be
 
-![Standalone Application – To-Be](Members/workflow_screenshot/2.2%20Standalone%20Application%20%E2%80%93%20To-Be.png)
+![Standalone Application – To-Be](workflow_screenshot/2.2%20Standalone%20Application%20%E2%80%93%20To-Be.png)
 
 ## 3. Systems and Responsibilities
 
@@ -87,7 +87,7 @@ These responsibilities describe logical capabilities, not mandatory separate tec
 
 ### 4.1 Member Access Flow
 
-![Member Access Flow](Members/workflow_screenshot/4.1%20Member%20Access%20Flow.png)
+![Member Access Flow](workflow_screenshot/4.1%20Member%20Access%20Flow.png)
 
 Existing role-based permissions are retained. New actions must be mapped to the established permission framework.
 
@@ -131,7 +131,7 @@ As-Is:
 
 To-Be: Retain the existing experience with tenant-isolated data, existing permission enforcement, configurable KPIs, enhanced filters and additional import/refresh actions.
 
-![Open Members Overview](Members/workflow_screenshot/6.%20Detailed%20Members%20Workflows.png)
+![Open Members Overview](workflow_screenshot/6.%20Detailed%20Members%20Workflows.png)
 
 Exception: Unauthorised access is denied. An empty register displays an empty state rather than fabricated records.
 
@@ -153,7 +153,7 @@ To-Be: Preserve the five sections, apply applicable validations, check duplicate
 | Recognition and Social    | Publication/recognition details, spouse details, alternate phone numbers and types                 |
 | Advanced / System         | iWave, Capacity, Propensity, Affinity Scores, Profile URL, guest details and other existing fields |
 
-![Create Member Manually](Members/workflow_screenshot/MEM-WF-02%20%E2%80%93%20Create%20Member%20Manually.png)
+![Create Member Manually](workflow_screenshot/MEM-WF-02%20%E2%80%93%20Create%20Member%20Manually.png)
 
 Business rule: The record must be associated with the current tenant. Exact mandatory fields, particularly for organisations and foundations, require field-level approval.
 
@@ -165,7 +165,7 @@ As-Is: The Add New Member screenshot shows a Save Draft action. Its backend pers
 
 To-Be: Define a controlled draft lifecycle where incomplete data may be saved without being treated as a completed member.
 
-![Save and Resume Member Draft](Members/workflow_screenshot/MEM-WF-03%20%E2%80%93%20Save%20and%20Resume%20Member%20Draft.png)
+![Save and Resume Member Draft](workflow_screenshot/MEM-WF-03%20%E2%80%93%20Save%20and%20Resume%20Member%20Draft.png)
 
 Proposed rule: Drafts must remain separate from committed member counts until successfully submitted. Draft visibility, expiry and deletion rules require approval.
 
@@ -177,7 +177,7 @@ As-Is: Existing external applications supply member data to AiXPurpose.
 
 To-Be: Apply tenant validation, source mapping, duplicate detection and controlled updates before records enter the consolidated register.
 
-![Receive Integrated Member Data](Members/workflow_screenshot/MEM-WF-04%20%E2%80%93%20Receive%20Integrated%20Member%20Data.png)
+![Receive Integrated Member Data](workflow_screenshot/MEM-WF-04%20%E2%80%93%20Receive%20Integrated%20Member%20Data.png)
 
 Exception: Failed integration processing must not overwrite previously committed member information.
 
@@ -189,7 +189,7 @@ Actor: Authorised import user.
 
 To-Be: Import Excel/CSV member records through predefined templates, validate data, identify duplicates, report results and automatically refresh affected KPIs.
 
-![Bulk Import Members](Members/workflow_screenshot/MEM-WF-05%20%E2%80%93%20Bulk%20Import%20Members.png)
+![Bulk Import Members](workflow_screenshot/MEM-WF-05%20%E2%80%93%20Bulk%20Import%20Members.png)
 
 Import result categories:
 
@@ -209,7 +209,7 @@ Goal: MEM-GO-010, MEM-GO-011
 
 Approved rule: Potential duplicates must be detected, and conflicting member records require administrator review before merging or updating.
 
-![Validate and Resolve Duplicates](Members/workflow_screenshot/MEM-WF-06%20%E2%80%93%20Validate%20and%20Resolve%20Duplicates.png)
+![Validate and Resolve Duplicates](workflow_screenshot/MEM-WF-06%20%E2%80%93%20Validate%20and%20Resolve%20Duplicates.png)
 
 Exception: No automatic merge or conflicting overwrite is permitted without the required administrator approval. Matching criteria and non-conflicting update policy must be formally defined.
 
@@ -221,7 +221,7 @@ As-Is: Search by name, email or phone; filter by donor type or giving status; na
 
 To-Be: Preserve the existing controls, standardise filter combinations and support additional approved criteria.
 
-![Search, Filter and Paginate](Members/workflow_screenshot/MEM-WF-07%20%E2%80%93%20Search%2C%20Filter%20and%20Paginate.png)
+![Search, Filter and Paginate](workflow_screenshot/MEM-WF-07%20%E2%80%93%20Search%2C%20Filter%20and%20Paginate.png)
 
 Existing list columns remain Name, Donor Type, Contact, Location, Member Status, Pledged 2024, Created and Actions. The standalone application should use an approved dynamic reporting period rather than permanently displaying 2024.
 
@@ -235,7 +235,7 @@ The current profile includes member classification, status, contact information,
 
 To-Be: Retain the profile and add approved source, quality and audit indicators.
 
-![View Member Profile](Members/workflow_screenshot/MEM-WF-08%20%E2%80%93%20View%20Member%20Profile.png)
+![View Member Profile](workflow_screenshot/MEM-WF-08%20%E2%80%93%20View%20Member%20Profile.png)
 
 ### MEM-WF-09 – Edit Member
 
@@ -245,7 +245,7 @@ As-Is: Edit opens the same five-section structure as Add Member, populated with 
 
 To-Be: Apply permissions, validations, change tracking and conflict review when required.
 
-![Edit Member](Members/workflow_screenshot/MEM-WF-09%20%E2%80%93%20Edit%20Member.png)
+![Edit Member](workflow_screenshot/MEM-WF-09%20%E2%80%93%20Edit%20Member.png)
 
 Exception: Unapproved conflicting updates are not committed.
 
@@ -260,7 +260,7 @@ Confirmed To-Be: Maintain two separate statuses.
 | Administrative Status | Active, Inactive                   | Controls administrative record activity |
 | Giving Status         | Prospect, Pledged, Donated, Lapsed | Describes giving-related classification |
 
-![Manage Member Status](Members/workflow_screenshot/MEM-WF-10%20%E2%80%93%20Manage%20Member%20Status.png)
+![Manage Member Status](workflow_screenshot/MEM-WF-10%20%E2%80%93%20Manage%20Member%20Status.png)
 
 Business rules:
 
@@ -286,7 +286,7 @@ As-Is: Existing KPI calculations are already implemented.
 
 To-Be: Allow selection of additional KPIs using approved calculation definitions.
 
-![Display and Configure KPIs](Members/workflow_screenshot/MEM-WF-11%20%E2%80%93%20Display%20and%20Configure%20KPIs.png)
+![Display and Configure KPIs](workflow_screenshot/MEM-WF-11%20%E2%80%93%20Display%20and%20Configure%20KPIs.png)
 
 Proposed additional KPIs: Active Members, New Members, Members by Type, Members by Location, Members by Source, Members with Pledges, Data Completeness, Conversion Rate and Pending Duplicate Reviews.
 
@@ -298,7 +298,7 @@ Goal: MEM-GO-014
 
 To-Be: Selecting a KPI filters the member list to matching records.
 
-![KPI Drill-Down](Members/workflow_screenshot/MEM-WF-12%20%E2%80%93%20KPI%20Drill-Down.png)
+![KPI Drill-Down](workflow_screenshot/MEM-WF-12%20%E2%80%93%20KPI%20Drill-Down.png)
 
 Example: Selecting Phone Verified displays members matching the existing phone-verification calculation.
 
@@ -325,7 +325,7 @@ To-Be: Support additional filters relevant to tenant requirements.
 | Pledge Range           | To-Be               |
 | Data Completeness      | Proposed            |
 
-![Advanced Member Filtering](Members/workflow_screenshot/MEM-WF-13%20%E2%80%93%20Advanced%20Member%20Filtering.png)
+![Advanced Member Filtering](workflow_screenshot/MEM-WF-13%20%E2%80%93%20Advanced%20Member%20Filtering.png)
 
 ### MEM-WF-14 – Export Member Records
 
@@ -335,7 +335,7 @@ As-Is: Export CSV is available.
 
 To-Be: Export the authorised records matching the applied filters or approved selection.
 
-![Export Member Records](Members/workflow_screenshot/MEM-WF-14%20%E2%80%93%20Export%20Member%20Records.png)
+![Export Member Records](workflow_screenshot/MEM-WF-14%20%E2%80%93%20Export%20Member%20Records.png)
 
 Business rule: Exported records must remain within the user's authorised tenant and data scope.
 
@@ -345,7 +345,7 @@ Goal: MEM-GO-024
 
 To-Be: Refresh the Members list and KPI summaries using the latest committed data.
 
-![Refresh Members and KPIs](Members/workflow_screenshot/MEM-WF-15%20%E2%80%93%20Refresh%20Members%20and%20KPIs.png)
+![Refresh Members and KPIs](workflow_screenshot/MEM-WF-15%20%E2%80%93%20Refresh%20Members%20and%20KPIs.png)
 
 Confirmed rule: Successfully imported records automatically update affected KPI figures.
 
@@ -359,7 +359,7 @@ As-Is: The member row's dollar icon and profile Add Donation action open donatio
 
 Confirmed business relationship: Every donor must be associated with an existing member, but not every member is a donor.
 
-![Initiate Donation from Member](Members/workflow_screenshot/MEM-WF-16%20%E2%80%93%20Initiate%20Donation%20from%20Member.png)
+![Initiate Donation from Member](workflow_screenshot/MEM-WF-16%20%E2%80%93%20Initiate%20Donation%20from%20Member.png)
 
 Boundary: Donation amounts, payment processing, campaign validation and transaction statuses belong to the Donors/Donations workflows. Member preselection after navigation is a recommended enhancement requiring verification.
 
@@ -371,7 +371,7 @@ As-Is: Existing role-based permissions are implemented.
 
 To-Be: Support independent organisation configurations and approved optional functionality while using the existing access framework.
 
-![Tenant Configuration and Feature Access](Members/workflow_screenshot/MEM-WF-17%20%E2%80%93%20Tenant%20Configuration%20and%20Feature%20Access.png)
+![Tenant Configuration and Feature Access](workflow_screenshot/MEM-WF-17%20%E2%80%93%20Tenant%20Configuration%20and%20Feature%20Access.png)
 
 Configuration may govern permitted KPI choices, supported fields, filters, import options and eligible optional capabilities.
 
@@ -394,7 +394,7 @@ To-Be: Record material member-management events and handle failures without corr
 | Access denied      | Prevent restricted operation               |
 | Update conflict    | Prevent unapproved overwrites              |
 
-![Audit and Exception Handling](Members/workflow_screenshot/MEM-WF-18%20%E2%80%93%20Audit%20and%20Exception%20Handling.png)
+![Audit and Exception Handling](workflow_screenshot/MEM-WF-18%20%E2%80%93%20Audit%20and%20Exception%20Handling.png)
 
 ## 7. Shared Validation Rules
 

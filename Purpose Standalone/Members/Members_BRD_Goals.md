@@ -111,7 +111,7 @@ A standalone AiXPurpose application must support these variations through a comm
 
 ### 2.3 Existing-to-Standalone Transition
 
-![Existing-to-Standalone Transition](Members/Screenshots/2.3%20Existing-to-Standalone%20Transition.png)
+![Existing-to-Standalone Transition](Screenshots/2.3%20Existing-to-Standalone%20Transition.png)
 
 ## 3. Business Problem Statement
 
@@ -161,7 +161,7 @@ The standalone product must provide common core functionality while allowing aut
 
 ### 4.2 Standalone Operating Model
 
-![Standalone Operating Model](Members/Screenshots/4.2%20Standalone%20Operating%20Model.png)
+![Standalone Operating Model](Screenshots/4.2%20Standalone%20Operating%20Model.png)
 
 The diagram represents logical tenant isolation. The physical database and deployment architecture will be defined separately.
 
@@ -250,13 +250,13 @@ Selecting the row and selecting the View icon must lead to the same record detai
 
 ### 5.6 Existing Member Management Flow
 
-![Existing Member Management Flow](Members/Screenshots/5.6%20Existing%20Member%20Management%20Flow.png)
+![Existing Member Management Flow](Screenshots/5.6%20Existing%20Member%20Management%20Flow.png)
 
 ### 5.7 Current Data Sources
 
 The existing application supports two confirmed paths for member data.
 
-![Current Data Sources](Members/Screenshots/5.7%20Current%20Data%20Sources.png)
+![Current Data Sources](Screenshots/5.7%20Current%20Data%20Sources.png)
 
 The detailed transformation, matching and synchronisation rules for integrated records have not yet been provided.
 
@@ -286,7 +286,7 @@ The standalone application must allow authorised users to maintain a consolidate
 
 ### 6.2 Target Members Operating Model
 
-![Target Members Operating Model](Members/Screenshots/6.2%20Target%20Members%20Operating%20Model.png)
+![Target Members Operating Model](Screenshots/6.2%20Target%20Members%20Operating%20Model.png)
 
 ### 6.3 Target Business Capabilities
 
@@ -513,7 +513,7 @@ Expected outcome: The same tenant's member records follow common business rules 
 
 ### 9.1 Member Management Architecture
 
-![Member Management Architecture](Members/Screenshots/9.1%20Member%20Management%20Architecture.png)
+![Member Management Architecture](Screenshots/9.1%20Member%20Management%20Architecture.png)
 
 ### 9.2 Relationship Between Members and Donations
 
@@ -521,13 +521,13 @@ The Members capability maintains constituent information, while donation-related
 
 The standalone application must provide a consistent relationship between these records.
 
-![Relationship Between Members and Donations](Members/Screenshots/9.2%20Relationship%20Between%20Members%20and%20Donation.png)
+![Relationship Between Members and Donations](Screenshots/9.2%20Relationship%20Between%20Members%20and%20Donation.png)
 
 The exact rules governing when a member becomes a donor, whether a donor is always linked to a member, and how historical donations are matched remain business decisions.
 
 ### 9.3 Tenant Configuration Relationship
 
-![Tenant Configuration Relationship](Members/Screenshots/9.3%20Tenant%20Configuration%20Relationship.png)
+![Tenant Configuration Relationship](Screenshots/9.3%20Tenant%20Configuration%20Relationship.png)
 
 Each tenant's configuration must remain within platform-defined security, validation and data-governance boundaries.
 
@@ -575,7 +575,7 @@ The current application uses a shared form structure for these types. The standa
 
 ### 11.3 Member-Type Considerations
 
-![Member-Type Considerations](Members/Screenshots/11.3%20Member-Type%20Considerations.png)
+![Member-Type Considerations](Screenshots/11.3%20Member-Type%20Considerations.png)
 
 Type-specific organisation and foundation forms are recommended enhancements. The existing screenshot shows person-oriented first-name and last-name fields even for an organisation record. The correct future display-name and validation rules must therefore be defined rather than assumed.
 
@@ -647,7 +647,7 @@ The following rules establish the business baseline for standalone Members manag
 
 ### 13.1 Target Member Lifecycle
 
-![Target Member Lifecycle](Members/Screenshots/13.1%20Target%20Member%20Lifecycle.png)
+![Target Member Lifecycle](Screenshots/13.1%20Target%20Member%20Lifecycle.png)
 
 ### 13.2 Member Status Model
 
@@ -671,7 +671,7 @@ Use distinct fields for:
 
 This avoids treating an administratively inactive record as equivalent to a member whose giving activity has lapsed.
 
-![Member Status Model](Members/Screenshots/13.2%20Member%20Status%20Model.png)
+![Member Status Model](Screenshots/13.2%20Member%20Status%20Model.png)
 
 This is a recommended data-model separation, not a claim about existing implementation. Rules for automatic status changes, including transitions after donation activity, require approval.
 
@@ -695,7 +695,7 @@ The import process should provide a downloadable template reflecting the require
 
 ### 14.3 Proposed Import Process
 
-![Proposed Import Process](Members/Screenshots/14.3%20Proposed%20Import%20Process.png)
+![Proposed Import Process](Screenshots/14.3%20Proposed%20Import%20Process.png)
 
 ### 14.4 Import Outcome Example
 
@@ -764,7 +764,7 @@ These are recommended KPI candidates. Their definitions, calculations, permitted
 
 ### 15.3 KPI Interaction Model
 
-![KPI Interaction Model](Members/Screenshots/15.3%20KPI%20Interaction%20Model.png)
+![KPI Interaction Model](Screenshots/15.3%20KPI%20Interaction%20Model.png)
 
 ### 15.4 KPI Configuration
 
@@ -820,7 +820,7 @@ Filter availability must depend on tenant configuration, actual data and user pe
 
 ### 16.3 Filter and Export Journey
 
-![Filter and Export Journey](Members/Screenshots/16.3%20Filter%20and%20Export%20Journey.png)
+![Filter and Export Journey](Screenshots/16.3%20Filter%20and%20Export%20Journey.png)
 
 ### 16.4 Export Principles
 
@@ -868,7 +868,7 @@ Recommended additions include:
 
 ### 17.3 Member Profile Journey
 
-![Member Profile Journey](Members/Screenshots/17.3%20Member%20Profile%20Journey.png)
+![Member Profile Journey](Screenshots/17.3%20Member%20Profile%20Journey.png)
 
 The source and quality sections are To-Be recommendations. They are not identified as current UI components.
 
@@ -886,7 +886,7 @@ However, the exact technical meaning of separate Members and Donors records has 
 
 ### 18.2 Existing Donation Handoff
 
-![Existing Donation Handoff](Members/Screenshots/18.2%20Existing%20Donation%20Handoff.png)
+![Existing Donation Handoff](Screenshots/18.2%20Existing%20Donation%20Handoff.png)
 
 Preselection and subsequent updates to member status, giving totals and donor scoring must be confirmed.
 
@@ -953,7 +953,7 @@ The standalone Members capability must apply privacy-aware management of constit
 
 ### 20.2 Tenant Data Boundary
 
-![Tenant Data Boundary](Members/Screenshots/20.2%20Tenant%20Data%20Boundary.png)
+![Tenant Data Boundary](Screenshots/20.2%20Tenant%20Data%20Boundary.png)
 
 Detailed security controls, retention requirements and applicable jurisdiction-specific obligations require separate approval.
 
@@ -1151,7 +1151,7 @@ The following matrix connects business goals with their expected Workflow and Fe
 
 ### 27.1 Traceability Model
 
-![Traceability Model](Members/Screenshots/27.1%20Traceability%20Model.png)
+![Traceability Model](Screenshots/27.1%20Traceability%20Model.png)
 
 Every major To-Be Members capability must be traceable to an approved business goal and one or more business rules.
 

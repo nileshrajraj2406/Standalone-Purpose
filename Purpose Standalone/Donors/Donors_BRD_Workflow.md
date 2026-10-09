@@ -103,11 +103,11 @@ These are functional actors mapped to existing permissions, not newly mandated s
 
 ### 3.1 Existing Application – As-Is
 
-![Existing Application – As-Is](Donors/screenshot%20goals/5.8%20As-Is%20Donors%20Workflow.png)
+![Existing Application – As-Is](screenshot%20goals/5.8%20As-Is%20Donors%20Workflow.png)
 
 ### 3.2 Standalone Application – To-Be
 
-![Standalone Application – To-Be](Donors/screenshot%20goals/6.2%20Target%20Donors%20Operating%20Model.png)
+![Standalone Application – To-Be](screenshot%20goals/6.2%20Target%20Donors%20Operating%20Model.png)
 
 Important: This is the target process. The exact payment completion statuses, transaction-matching identifiers and recalculation policies must follow approved business definitions.
 
@@ -259,7 +259,7 @@ To-Be:
 7. Commit the eligible donation according to the approved transaction-status policy.
 8. Update applicable donor records and giving summaries.
 
-![Add Donor / Record Donation](Donors/screenshot%20goals/12.1%20Target%20Donation%20Lifecycle.png)
+![Add Donor / Record Donation](screenshot%20goals/12.1%20Target%20Donation%20Lifecycle.png)
 
 Important: Save Donation must not be assumed to initiate payment processing. That behaviour remains an open business decision.
 
@@ -278,7 +278,7 @@ To-Be Process:
 5. Preserve the original member identity.
 6. Update applicable donor summaries.
 
-![Resolve Member–Donor Relationship](Donors/screenshot%20goals/4.2%20Member%E2%80%93Donor%20Relationship.png)
+![Resolve Member–Donor Relationship](screenshot%20goals/4.2%20Member%E2%80%93Donor%20Relationship.png)
 
 Special consideration: Prospects can appear in existing Donors-related insights. Their display and counting rules must distinguish prospects from members with qualifying donations.
 
@@ -298,7 +298,7 @@ To-Be:
 6. Commit eligible changes.
 7. Update donor profile, giving history and affected KPIs.
 
-![Receive Integrated Donations](Donors/screenshot%20goals/5.9%20Existing%20Data%20Sources.png)
+![Receive Integrated Donations](screenshot%20goals/5.9%20Existing%20Data%20Sources.png)
 
 Exception: Failed integration operations must not overwrite previously committed records.
 
@@ -321,7 +321,7 @@ To-Be:
 9. View processing results.
 10. Automatically update affected donor KPIs after successful commits.
 
-![Bulk Import Donor Data](Donors/screenshot%20goals/17.3%20Import%20Workflow.png)
+![Bulk Import Donor Data](screenshot%20goals/17.3%20Import%20Workflow.png)
 
 Important: One imported donor may have several donation rows. Unique donor counts must not be confused with successfully imported transaction counts.
 
@@ -374,7 +374,7 @@ To-Be:
 5. Save the configuration.
 6. Recalculate affected donor classifications.
 
-![Configure Donor Tiers](Donors/screenshot%20goals/13.3%20Tier%20Classification.png)
+![Configure Donor Tiers](screenshot%20goals/13.3%20Tier%20Classification.png)
 
 Open decision: Actual threshold values, reporting period, currency, boundary rules and treatment of reversed donations.
 
@@ -393,7 +393,7 @@ To-Be:
 5. Assign the appropriate tier.
 6. Update the donor profile and filtering information.
 
-![Calculate and Assign Donor Tiers](Donors/screenshot%20goals/13.3%20Tier%20Classification.png)
+![Calculate and Assign Donor Tiers](screenshot%20goals/13.3%20Tier%20Classification.png)
 
 Exception: Missing or invalid tier configuration must not produce an arbitrary classification.
 
@@ -435,7 +435,7 @@ To-Be:
 5. Calculate additional KPIs using approved definitions.
 6. Save preferences under the approved user-level or tenant-level configuration model.
 
-![Display and Configure KPIs](Donors/screenshot%20goals/15.3%20KPI%20Interaction.png)
+![Display and Configure KPIs](screenshot%20goals/15.3%20KPI%20Interaction.png)
 
 Suggested additional KPIs: Total Giving, New Donors, Repeat Donors, Average Gift, Largest Gift, Donors by Tier, Monthly Donors, Giving Trend, Pledge Fulfilment and Member-to-Donor Conversion.
 
@@ -454,7 +454,7 @@ To-Be:
 5. User may refine filters, inspect donor details or export permitted data.
 6. User may clear the KPI selection.
 
-![KPI Drill-Down](Donors/screenshot%20goals/15.3%20KPI%20Interaction.png)
+![KPI Drill-Down](screenshot%20goals/15.3%20KPI%20Interaction.png)
 
 Example: Total Donors can drill into qualifying donors. Retention Rate may require a period-specific cohort breakdown rather than a list whose count is expected to equal the displayed percentage.
 
@@ -508,7 +508,7 @@ To-Be:
 5. Keep Lifetime Giving, Last Gift and Total Gifts consistent with qualifying records.
 6. Display source or reconciliation information where approved.
 
-![Review Donation History](Donors/screenshot%20goals/12.1%20Target%20Donation%20Lifecycle.png)
+![Review Donation History](screenshot%20goals/12.1%20Target%20Donation%20Lifecycle.png)
 
 Exception: Missing, reversed or unresolved records must follow approved transaction eligibility rules rather than being silently counted.
 
@@ -547,7 +547,7 @@ To-Be:
 5. Save tenant-specific settings.
 6. Apply settings only within the relevant workspace.
 
-![Tenant Configuration and Permissions](Donors/screenshot%20goals/21.%20Security%20and%20Privacy.png)
+![Tenant Configuration and Permissions](screenshot%20goals/21.%20Security%20and%20Privacy.png)
 
 Exception: Tenant settings cannot disable mandatory security or grant access to another organisation's data.
 
@@ -643,7 +643,7 @@ Important distinction: Importing 250 donation transactions does not mean 250 new
 
 ### 8.2 Data Synchronisation Relationship
 
-![Data Synchronisation Relationship](Donors/screenshot%20goals/5.9%20Existing%20Data%20Sources.png)
+![Data Synchronisation Relationship](screenshot%20goals/5.9%20Existing%20Data%20Sources.png)
 
 ## 9. Screenshot Reference Mapping
 
@@ -691,7 +691,7 @@ Screenshots establish visible UI behaviour. They do not independently verify bac
 
 ### 10.1 Requirements Traceability
 
-![Requirements Traceability](Donors/screenshot%20goals/28.1%20Traceability%20Model.png)
+![Requirements Traceability](screenshot%20goals/28.1%20Traceability%20Model.png)
 
 ## 11. Feature Catalogue Handoff
 

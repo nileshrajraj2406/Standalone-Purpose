@@ -94,7 +94,7 @@ The standalone product must support organisations that rely on integrations, man
 
 ### 2.3 Business Transformation
 
-![Business Transformation](Donors/screenshot%20goals/2.3%20Business%20Transformation.png)
+![Business Transformation](screenshot%20goals/2.3%20Business%20Transformation.png)
 
 ## 3. Business Problem Statement
 
@@ -137,7 +137,7 @@ Provide organisations with a secure, centralised and configurable donor-manageme
 
 ### 4.2 Member–Donor Relationship
 
-![Member–Donor Relationship](Donors/screenshot%20goals/4.2%20Member%E2%80%93Donor%20Relationship.png)
+![Member–Donor Relationship](screenshot%20goals/4.2%20Member%E2%80%93Donor%20Relationship.png)
 
 A qualifying donation establishes donor eligibility. The exact qualifying transaction statuses must be approved.
 
@@ -258,11 +258,11 @@ These weights are visible in the current interface but do not establish the comp
 
 ### 5.8 As-Is Donors Workflow
 
-![As-Is Donors Workflow](Donors/screenshot%20goals/5.8%20As-Is%20Donors%20Workflow.png)
+![As-Is Donors Workflow](screenshot%20goals/5.8%20As-Is%20Donors%20Workflow.png)
 
 ### 5.9 Existing Data Sources
 
-![Existing Data Sources](Donors/screenshot%20goals/5.9%20Existing%20Data%20Sources.png)
+![Existing Data Sources](screenshot%20goals/5.9%20Existing%20Data%20Sources.png)
 
 The precise integration mappings, synchronisation frequency and duplicate rules have not been confirmed.
 
@@ -274,7 +274,7 @@ The enhanced Donors capability must support different organisations through a co
 
 ### 6.2 Target Donors Operating Model
 
-![Target Donors Operating Model](Donors/screenshot%20goals/6.2%20Target%20Donors%20Operating%20Model.png)
+![Target Donors Operating Model](screenshot%20goals/6.2%20Target%20Donors%20Operating%20Model.png)
 
 An unresolved member identity must not result in an automatically created or incorrectly linked donor.
 
@@ -400,7 +400,7 @@ The interface's Prospects KPI and Major Prospects filter must remain supported. 
 
 ### 9.2 Relationship Diagram
 
-![Relationship Diagram](Donors/screenshot%20goals/9.2%20Relationship%20Diagram.png)
+![Relationship Diagram](screenshot%20goals/9.2%20Relationship%20Diagram.png)
 
 ## 10. Stakeholders and Actors
 
@@ -491,7 +491,7 @@ These functional actors must be mapped to the application's existing permission 
 
 ### 12.1 Target Donation Lifecycle
 
-![Target Donation Lifecycle](Donors/screenshot%20goals/12.1%20Target%20Donation%20Lifecycle.png)
+![Target Donation Lifecycle](screenshot%20goals/12.1%20Target%20Donation%20Lifecycle.png)
 
 ### 12.2 Transaction Status Considerations
 
@@ -529,7 +529,7 @@ Authorised tenant settings should support:
 
 ### 13.3 Tier Classification
 
-![Tier Classification](Donors/screenshot%20goals/13.3%20Tier%20Classification.png)
+![Tier Classification](screenshot%20goals/13.3%20Tier%20Classification.png)
 
 Illustrative amount thresholds previously discussed must not be treated as approved values.
 
@@ -587,7 +587,7 @@ All additional KPIs require approved definitions and data sources.
 
 ### 15.3 KPI Interaction
 
-![KPI Interaction](Donors/screenshot%20goals/15.3%20KPI%20Interaction.png)
+![KPI Interaction](screenshot%20goals/15.3%20KPI%20Interaction.png)
 
 ### 15.4 Automatic KPI Updates
 
@@ -650,7 +650,7 @@ The import capability must support:
 
 ### 17.3 Import Workflow
 
-![Import Workflow](Donors/screenshot%20goals/17.3%20Import%20Workflow.png)
+![Import Workflow](screenshot%20goals/17.3%20Import%20Workflow.png)
 
 An import containing multiple donations by the same member must preserve the distinct donation records without creating multiple donor identities.
 
@@ -725,7 +725,7 @@ Final ownership must be aligned with the actual application implementation.
 
 ## 21. Security and Privacy
 
-![Security and Privacy](Donors/screenshot%20goals/21.%20Security%20and%20Privacy.png)
+![Security and Privacy](screenshot%20goals/21.%20Security%20and%20Privacy.png)
 
 The Donors capability must:
 
@@ -886,7 +886,7 @@ No unapproved numerical fundraising or performance targets are assumed.
 
 ### 28.1 Traceability Model
 
-![Traceability Model](Donors/screenshot%20goals/28.1%20Traceability%20Model.png)
+![Traceability Model](screenshot%20goals/28.1%20Traceability%20Model.png)
 
 ## 29. Relationship to BRD Workflow
 

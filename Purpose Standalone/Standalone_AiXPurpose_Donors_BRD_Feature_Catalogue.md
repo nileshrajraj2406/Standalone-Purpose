@@ -1,14 +1,34 @@
-# Standalone AiXPurpose | Donor Management | Donors | BRD Feature Catalogue
+# Standalone AiXPurpose Donors — BRD Feature Catalogue
 
-**Status:** Draft for review  
-**Primary sources:** User's Donors requirements and screenshots, `Standalone_AiXPurpose_Donors_BRD_Goals.md`, `Standalone_AiXPurpose_Donors_BRD_Workflow.md`, `master_prompt_brd_feature_catalogue(1).md`.  
-**ID convention:** `DON-F-001` onward; document-local stable feature IDs. **Evidence:** Confirmed = directly supported behaviour; Approved assumption = user-authorised unbuilt proposal; Proposed = future candidate requiring confirmation. No existing role matrix, formulas, processing APIs or test case IDs are presumed.
+> Status: Draft for review
+> Primary sources: User Donors requirements and screenshots, `Standalone_AiXPurpose_Donors_BRD_Goals.md`, `Standalone_AiXPurpose_Donors_BRD_Workflow.md`, `master_prompt_brd_feature_catalogue(1).md`
+> ID convention: `DON-F-001` onward; document-local stable feature IDs.
+> Evidence legend: Confirmed = directly supported behaviour; Approved assumption = user-authorised unbuilt proposal; Proposed = future candidate requiring confirmation.
+> Scope note: No existing role matrix, formulas, processing APIs or test case IDs are presumed.
 
-## Selected Structure
-Contains source inventory, feature inventory, individually testable features, functional reference matrices, bidirectional traceability, decisions/gaps, implementation/QA handoff and validation. Omits arbitrary feature count targets, fabricated technical interfaces, unsupported permission tables and generic acceptance requirements.
+## Overview
+This document captures the Donors feature catalogue for the Standalone AiXPurpose product in a README-style format. It breaks down goals and workflows into individually reviewable, testable product features and tracks open decisions, feature traceability, and implementation handoff information.
+
+The catalogue is intentionally scoped to observable product behaviour derived from source materials and screenshots. It avoids guessing unsupported permissions, formulas, backend interfaces, or generic acceptance criteria.
+
+## Table of Contents
+- [Overview](#overview)
+- [Scope and Document Relationship](#1-scope-and-document-relationship)
+- [Evidence and Screenshots](#2-evidence-and-screenshots)
+- [Feature Inventory](#3-feature-inventory)
+- [Detailed Feature Catalogue](#4-detailed-feature-catalogue)
+- [Applicable Functional Matrices](#5-applicable-functional-matrices)
+- [Goal → Workflow → Feature Coverage](#6-goal--workflow--feature-coverage)
+- [Workflow → Feature Coverage](#7-workflow--feature-coverage)
+- [Reverse Feature Traceability](#8-reverse-feature-traceability)
+- [Pending Decisions and Coverage Gaps](#9-pending-decisions-and-coverage-gaps)
+- [Product, Engineering and QA Handoff](#10-product-engineering-and-qa-handoff)
+- [Validation Summary](#11-validation-summary)
 
 ## 1. Scope and Document Relationship
-This catalogue decomposes Donors goals and workflows into individually reviewable functional requirements. **Goals describe why; workflows describe how; features define observable product behaviour**. The same product features are available across client tenants; client data/access remains isolated. Campaigns, Members, Tasks, Communications and external connectors are included only as dependencies of Donors page behaviour. Member manual-creation fields are specified in the separate Members catalogue.
+This catalogue decomposes Donors goals and workflows into individually reviewable functional requirements. Goals describe why; workflows describe how; features define observable product behaviour. The same product features are available across client tenants; client data and access remain isolated.
+
+Campaigns, Members, Tasks, Communications, and external connectors are included only as dependencies of Donors page behaviour. Member manual-creation fields are specified in the separate Members catalogue.
 
 ## 2. Evidence and Screenshots
 | UI ID | Source asset | Feature evidence |
@@ -386,7 +406,7 @@ The feature inventory in Section 3 provides an index for backward lookup; the ex
 | DON-F-035 | BG-DON-004; BG-DON-008 | WF-DON-02; WF-DON-05 | Section 4 / DON-F-035 |
 
 ## 9. Pending Decisions and Coverage Gaps
-The following **Goals BRD decision IDs** remain unresolved; this catalogue does not silently approve any of them.
+The following Goals BRD decision IDs remain unresolved; this catalogue does not silently approve any of them.
 
 | Decision | Feature impact | Required business decision |
 |---|---|---|
@@ -401,15 +421,18 @@ The following **Goals BRD decision IDs** remain unresolved; this catalogue does 
 | OD-DON-09 | DON-F-001, 025 | Tenant/record-level grants and data protection requirements |
 | OD-DON-10 | DON-F-009, 029, 030, 035 | KPI choices and combined filter interaction |
 
-**Future boundary:** Full campaign donor outreach and email communication (FUT-DON-001) is a later enhancement. The current **Send Message** button is catalogued as a visible entry point only, not as a complete communication service.
+> Future boundary: Full campaign donor outreach and email communication (FUT-DON-001) is a later enhancement. The current Send Message button is catalogued as a visible entry point only, not as a complete communication service.
 
 ## 10. Product, Engineering and QA Handoff
 - **Product/BA:** confirm the decision log, formal donor/member conversion policy, donation record outcome, terminology and tier/score definitions; then update Goals → Workflow → Features consistently.
-- **Engineering/data/integrations:** use the approved features to determine source field ownership, identity reconciliation, tenant isolation, Campaign/Member lookup, record creation and import contracts. No API paths/database schema mandated here.
+- **Engineering/data/integrations:** use the approved features to determine source field ownership, identity reconciliation, tenant isolation, Campaign/Member lookup, record creation and import contracts. No API paths/database schema are mandated here.
 - **QA/UAT:** derive tests from the acceptance outcomes in Section 4; extend positive/negative/boundary cases only after unresolved validations, permission checks and formulas are approved.
 
 ## 11. Validation Summary
-- **Total features:** 35; **Confirmed:** 28; **Proposed:** 4; **Approved assumption:** 3.
-- **Groups:** Tenant and Navigation (3), Donor Listing (8), Donor Profile (6), Donation Entry (9), Exports and Integrations (2), Proposed Analytics (4), Proposed Import (3).
+- **Total features:** 35
+- **Confirmed:** 28
+- **Proposed:** 4
+- **Approved assumption:** 3
+- **Groups:** Tenant and Navigation (3), Donor Listing (8), Donor Profile (6), Donation Entry (9), Exports and Integrations (2), Proposed Analytics (4), Proposed Import (3)
 - **Goal and workflow coverage:** All eight BG-DON goals and all ten WF-DON workflows appear in the coverage tables; applicable rules BR-DON-001…010 are separately indexed. Traceability is at workflow level because precise numbered steps were not universally established for all source records.
 - **Known limits:** UI evidence does not prove backend processing, donor counts or score formulas; proposed and assumption-based entries require approval. Material decisions OD-DON-01…10 remain open.
